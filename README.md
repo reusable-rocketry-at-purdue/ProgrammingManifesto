@@ -36,7 +36,7 @@ For Mac users, double clicking on the setup will not work. You must follow these
 If this doesn’t work, try this:
 - Open terminal
 - Use cd **DIRECTORY** to navigate to the setup file
-- Type “sudo chmod +x **NAME OF FILE***” and hit enter
+- Type “sudo chmod +x **NAME OF FILE**” and hit enter
 - Type in your password, then open the file with “./**NAME OF FILE**”
 
 ## Basic Programming Standards
@@ -47,13 +47,6 @@ Basic programming standards will be followed for the programming of systems. To 
 /********************************
 * 
 * Function Name:
-*
-* Return Type:
-*
-* Parameters:
-* 1.
-* 2.
-* 3.
 *
 * Programmer’s Name & Email:
 *
