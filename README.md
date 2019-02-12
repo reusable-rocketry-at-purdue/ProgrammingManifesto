@@ -1,7 +1,7 @@
 # Reusable Rocketry at Purdue Programming Manifesto
 **The Entry Point for Your Programming Career**
 
-![Logo](resources/RRaPTrans.png)
+<p align="center"><img src="resources/RRaPTransCropped.png" width="300" height="300"></p>
 
 ## Basic Information
 RRaP plans to use the `STM32` family of microcontrollers to control multiple facets of electronics technology. There are two main reasons for this. For one thing, ECE classes (specifically CompE) at Purdue University will use the `STM32F4 Discovery boards` for programming knowledge. By using similar microcontrollers for development, we increase the chances of an individual in the program knowing how to code for our system. Also, the `STM32` family is industry standard. Many automotive manufacturers and businesses use them for day to day electronics. These chips are much faster than arduino `ATMega` based systems as clock speeds can reach 100 Mhz. Therefore, these chips are the best possible option for rocketry design. For data communications, the `CAN` bus will be used. The `CAN` bus is easy to implement, easy to control, has been industry standard since 2003, and is very efficient at data transfer. For this reason, the `CAN` bus will be used in conjunction with the `STM32` family to design PCB boards for use in rocketry systems.
