@@ -2,7 +2,7 @@
 
 **The Entry Point for Your Programming Career**
 
-<p align="center"><img src="resources/RRaPTransCropped.png" width="300" height="300"></p>
+<p align="center"><img src="resources/RRaPLogo.png" width="900" height="300"></p>
 
 ## Basic Information
 
