@@ -1,6 +1,6 @@
 # Reusable Rocketry at Purdue Programming Manifesto
 
-**The Entry Point for Your Programming Career**
+**Let's Get Programming!**
 
 <p align="center"><img src="resources/RRaPLogo.png" width="900" height="300"></p>
 
@@ -34,8 +34,8 @@ For Mac users, double clicking on the setup will not work. You must follow these
 - Type “sudo chmod +x **NAME OF FILE***” and hit enter
 - Type in your password, then open the file with “./**NAME OF FILE**”
 
-
 If this doesn’t work, try this:
+
 - Open terminal
 - Use cd **DIRECTORY** to navigate to the setup file
 - Type “sudo chmod +x **NAME OF FILE**” and hit enter
@@ -90,7 +90,7 @@ While the first example seems too simple to define the values of 1 and 8, the se
 
 ## The Use of CAN IDs in Software
 
-While on the topic of defining all values, CAN IDs, as stated above, are very important to use this concept with. There is a master list of CAN IDs found [here](). When using a CAN ID in software, it must match the list of CAN IDs found at the link. If an ID needs to be changed for any reason, or if one needs to be added, you must consult the other members of the software team before doing so. ***CHANGING CAN IDs REQUIRES DOING IT ON EVERY PIECE OF HARDWARE! KEEP CHANGES TO A MINIMUM!*** While this is the case, proper definition of CAN IDs will help aid this process. Here are two examples that show examples of good and bad useage.
+While on the topic of defining all values, CAN IDs, as stated above, are very important to use this concept with. There is a master list of CAN IDs found [here](https://github.com/reusable-rocketry-at-purdue/ClubInformation/blob/master/RRaPCANList.md). When using a CAN ID in software, it must match the list of CAN IDs found at the link. If an ID needs to be changed for any reason, or if one needs to be added, you must consult the other members of the software team before doing so. ***CHANGING CAN IDs REQUIRES DOING IT ON EVERY PIECE OF HARDWARE! KEEP CHANGES TO A MINIMUM!*** While this is the case, proper definition of CAN IDs will help aid this process. Here are two examples that show examples of good and bad useage.
 
 ```C
 //PROPER DEFINITIONS
@@ -109,7 +109,7 @@ void can_rx(struct canFrame)
 
         case(ACC_PITCH_CAN_ID):
             pitchDataHandler();
-            break;   
+            break;
     }
 
     return;
@@ -128,7 +128,7 @@ void can_rx(struct canFrame)
 
         case(0x6c7):
             pitchDataHandler();
-            break;   
+            break;
     }
 
     return;
@@ -192,3 +192,42 @@ The first example doesn't show that we are reading temperature data, nor does it
 ## STM32CubeMX Generated Code
 
 Editing `STM32CubeMX` generated code inside of the IDE is not acceptable. If an individual makes changes to the code without changing the values in the software, perfectly good code could become useless due to a slight imperfection with the `Cube` settings. Any changes to `RTOS`, `pinout`, or `clock values` must occur inside `STM32CubeMX` to ensure all changes are properly tracked and committed for ***ALL*** members to use.
+
+---
+
+## GitHub Use
+
+We will be using [GitHub](www.github.com) for our code storage platform. GitHub is a very powerful tool that allows us to store code for everyone to work on, as well as review changes made to code before implementing it. There are a couple of rules to using GitHub that are explained in this document and ***must*** be followed for proper code implementation.
+
+If you are new to GitHub, please see the tutorial [here](https://www.youtube.com/watch?v=0fKg7e37bQE) that shows you how to use GitHub on a basic level. Also, please sign up for an account and ask someone to add you to the organization before you begin writing code. Our organization has a GitHub page that can be found [here](https://github.com/reusable-rocketry-at-purdue/).
+
+## Master Protection
+
+All important, working code should (and will) have master protection. This means that you cannot (and shouldn't) commit directly to master. The master branch should only have working code on it. One should be able to clone master and have it work flawlessly with no questions asked. Broken code or features in progress should not be added to master until it will work reliably. Code review will help with this.
+
+When adding a new feature to a repository, one should create a new branch with a descriptive name to help differentiate forms of the code. Then, all commits should be to that repository. Commit early, and commit often. You should never have code locally that another person might want to work on. Branching is how we defeat this. You may push as much as you want to your branch, but never to master. Merging will commence after a pull request is reviewed.
+
+## Commit Messages
+
+Crafting the perfect commit message is an art. We have a few rules to follow that allow users to determine what occured in the commit.
+
+1. Commits that fix bugs should be in lowercase.
+2. Commits that add new features should be capitalized.
+   1. This will allow a user to tell instantly that it is a major change that requires attention.
+3. Commits should not exceed the character limit set by GitHub. In other words, if a `...` is required, it's wrong.
+4. Commits should tell other users why the commit was important, rather than just saying `fixed bugs`.
+   1. We need to know what was fixed, not just that something was.
+
+> Note: `README.md` based repositories do not need to follow this structure as they aren't paramount to operations
+
+## README Files
+
+Readme files are not requried for a project, but are highly encouraged. Adding a `README.md` will allow other users to tell what the code does, how to implement it, and how to effectively modify/add to it. READMEs are great for setting the guidelines for your project rather than having to tell each individual what occurs. Each member should be able to look at a README and figure out what a project does and how it does it. With the current structure of working alone on projects, it is *very important* to add READMEs so that others can work anytime, any place rather than having to meet to talk about the code structure/implementation.
+
+---
+
+## Learning Embedded Systems
+
+In order to begin programming embedded systems, you must first understand some of the basics. Tutorials showing these basics can be found below. It is suggested that you do them in order to benefit you the most. Keep in mind, these assume you have a solid working knowledge of the `C` language.
+
+- [Blinking LED Tutorial](https://github.com/reusable-rocketry-at-purdue/Tutorials/tree/master/TutorialOne)
